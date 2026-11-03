@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Eversol: 730 W solar panels, 16 kWh lithium batteries and 11 kW hybrid inverters for homes and businesses in Iraq. Showroom on 120 Meter Road, Erbil.">
+<link rel="canonical" href="https://eversol.org/">
+<meta name="theme-color" content="#060912">
+<meta property="og:title" content="EVERSOL">
+<meta property="og:description" content="Solar panels, batteries and hybrid inverters for homes and businesses in Iraq.">
+<meta property="og:image" content="https://eversol.org/hero_lit.jpg">
+<style>[hidden]{display:none!important}img{max-width:100%}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Eversol · Solar energy systems in Erbil, Iraq</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,300..900&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Vazirmatn:wght@300..800&display=swap">
+<style>
+/* Layout: one real-photo hero (blackout → lit, light spreading from the central house), then a calm engineering document — rooftop photo, metrics, system console, paper spec sheet, estimator, process, coverage, close. Trilingual EN / Sorani / Arabic. */
+:root{
+  color-scheme:dark;
+  --night:#060912;      /* page ground, blackout sky */
+  --deep:#0C1322;       /* raised panels */
+  --rule:#1C2638;       /* hairlines */
+  --fg:#E9EEF6;         /* primary text */
+  --muted:#8C98AD;      /* secondary text */
+  --sun:#F4B54A;        /* photon amber: light, output, action */
+  --cell:#7FB2FF;       /* cell blue: energy lines, data */
+  --ok:#5FD3A0;
+  --off:#FF7A6B;
+  --paper:#EDF0F4;      /* spec-sheet section */
+  --ink:#0A0F1A;
+  --ink-muted:#4F5B70;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --latin-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --gutter:clamp(16px,4vw,56px);
+  --max:1240px;
+  --wmx:-60vw;          /* wordmark entrance offset, mirrored in RTL */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--sun);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cell)}
+h1,h2,h3{font-family:var(--display);font-stretch:112%;text-wrap:balance;margin:0;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.6vw,60px);font-weight:600}
+h3{font-size:20px;font-weight:600}
+p{margin:0}
+.lede{color:var(--muted);font-size:clamp(16px,1.4vw,19px);max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:10px;height:48px;padding-inline:22px;border-radius:999px;font:500 15px/1 var(--body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,border-color .2s;white-space:nowrap}
+.btn-sun{background:var(--sun);color:var(--ink)}
+.btn-sun:hover{transform:translateY(-1px);background:#FFC766}
+.btn-ghost{border-color:rgba(233,238,246,.32);color:var(--fg);background:rgba(6,9,18,.35);backdrop-filter:blur(6px)}
+.btn-ghost:hover{border-color:var(--fg)}
+
+/* ---------- RTL (Sorani / Arabic): Arabic-script face, no tracking, taller leading ---------- */
+[dir=rtl]{
+  --display:"Vazirmatn","IBM Plex Sans",Arial,sans-serif;
+  --body:"Vazirmatn","IBM Plex Sans",Arial,sans-serif;
+  --mono:"IBM Plex Mono","Vazirmatn",ui-monospace,monospace;
+  --wmx:60vw;
+}
+[dir=rtl] *:not(.wm):not(.logo){letter-spacing:0}
+[dir=rtl] h1,[dir=rtl] h2,[dir=rtl] h3{font-stretch:100%;line-height:1.3}
+[dir=rtl] .hero h1{font-weight:500}
+[dir=rtl] .btn{font-weight:500}
+.wm,.logo{font-family:var(--latin-display);direction:ltr;unicode-bidi:isolate}
+.num{direction:ltr;unicode-bidi:isolate}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;inset:0 0 auto 0;z-index:20;padding-top:env(safe-area-inset-top,0px);transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.solid{background:rgba(6,9,18,.84);backdrop-filter:blur(14px);border-color:var(--rule)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-stretch:125%;font-weight:700;letter-spacing:.2em;font-size:15px}
+.logo svg{flex:none}
+.nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted);margin-inline-start:auto}
+.nav ul a{text-decoration:none;transition:color .2s}
+.nav ul a:hover{color:var(--fg)}
+.nav .btn{height:40px;padding-inline:18px;font-size:14px}
+.lang{display:flex;align-items:center;gap:1px;font-family:"IBM Plex Mono","Vazirmatn",ui-monospace,monospace;font-size:13px;color:var(--muted);white-space:nowrap}
+.lang button{all:unset;cursor:pointer;padding:6px 7px;border-radius:6px;color:var(--muted);font:inherit;line-height:1;transition:color .2s}
+.lang button:hover{color:var(--fg)}
+.lang button.on{color:var(--sun);font-weight:500}
+.lang button:focus-visible{outline:2px solid var(--sun);outline-offset:2px}
+.lang .sep{opacity:.45;padding-inline:1px}
+@media (max-width:860px){.nav ul{display:none}.lang{margin-inline-start:auto}}
+@media (max-width:620px){.nav .btn{display:none}.nav .wrap{height:64px}}
+
+/* ---------- hero ---------- */
+section.hero{position:relative;height:clamp(600px,92vh,900px);overflow:hidden;isolation:isolate;padding:0;background:var(--night)}
+.hero-media{position:absolute;inset:0;transform-origin:50% 62%;will-change:transform}
+.hero.kb .hero-media{animation:kb 9s linear forwards}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.04)}}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;display:block}
+.hero-img.lit{--r:0%;
+  -webkit-mask-image:radial-gradient(circle farthest-corner at 50% 62%,#000 calc(var(--r) - 24%),rgba(0,0,0,0) var(--r));
+  mask-image:radial-gradient(circle farthest-corner at 50% 62%,#000 calc(var(--r) - 24%),rgba(0,0,0,0) var(--r))}
+.hero.rest .hero-img.lit{--r:135%}
+.scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(6,9,18,.74) 0%,rgba(6,9,18,.56) 28%,rgba(6,9,18,.22) 50%,rgba(6,9,18,0) 64%,rgba(6,9,18,0) 84%,rgba(6,9,18,.6) 100%)}
+#spark{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.hero-inner{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:clamp(92px,13vh,128px);padding-inline:var(--gutter)}
+.wm{position:relative;font-stretch:125%;font-weight:800;font-size:clamp(44px,9vw,124px);letter-spacing:.14em;line-height:1;padding-left:.14em;color:#fff;
+  text-shadow:0 0 28px rgba(244,181,74,.35),0 2px 18px rgba(6,9,18,.6);
+  opacity:0;transform:translateX(var(--wmx));filter:blur(6px)}
+.hero.brand .wm{animation:wmIn 1.5s cubic-bezier(.22,.72,.2,1) forwards}
+.hero.rest .wm{opacity:1;transform:none;filter:none}
+@keyframes wmIn{0%{opacity:0;transform:translateX(var(--wmx));filter:blur(6px)}45%{opacity:1;filter:blur(1.5px)}100%{opacity:1;transform:none;filter:blur(0)}}
+.hero h1{margin-top:18px;font-size:clamp(19px,2.1vw,27px);font-weight:400;font-stretch:100%;letter-spacing:.01em;color:#F1F4F9;text-shadow:0 1px 14px rgba(6,9,18,.7)}
+.hero .sub{margin-top:8px;color:#C9D2E0;max-width:54ch;font-size:clamp(15px,1.15vw,17px);text-shadow:0 1px 12px rgba(6,9,18,.8)}
+.hero .ctas{margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.hero-foot{position:absolute;inset-inline:var(--gutter);bottom:18px;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.readout{display:flex;gap:8px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;letter-spacing:.04em}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(6,9,18,.66);border:1px solid rgba(127,178,255,.18);backdrop-filter:blur(8px);white-space:nowrap}
+.chip b{font-weight:500;color:var(--fg)}
+.chip span{color:var(--muted)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--off);box-shadow:0 0 8px var(--off)}
+.dot.on{background:var(--ok);box-shadow:0 0 8px var(--ok)}
+.replay{margin-inline-start:auto;font:500 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:rgba(6,9,18,.66);border:1px solid var(--rule);border-radius:999px;padding:9px 14px;cursor:pointer;transition:color .2s,border-color .2s}
+.replay:hover{color:var(--fg);border-color:var(--muted)}
+.hero-btns{margin-inline-start:auto;display:flex;gap:8px}
+.hero-btns .replay{margin-inline-start:0}
+.sound{display:inline-flex;align-items:center;gap:7px}
+.sound .wave{display:none}.sound[aria-pressed=true] .wave{display:inline}.sound[aria-pressed=true] .mute{display:none}
+.sound[aria-pressed=true]{color:var(--sun);border-color:rgba(244,181,74,.5)}
+@media (max-width:560px){.hero-foot{bottom:14px}.chip{padding:6px 10px;font-size:11px}.hero-inner{padding-top:clamp(84px,12vh,110px)}}
+
+/* ---------- photo feature ---------- */
+.feature{position:relative;margin-top:0}
+.feature figure{position:relative;margin:0;aspect-ratio:2000/1116;max-height:88vh;width:100%;max-width:100%;overflow:hidden}
+.feature img{width:100%;height:100%;object-fit:cover;display:block}
+.feature figure::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 55% at 15% 85%,rgba(6,9,18,.7),rgba(6,9,18,0) 70%),linear-gradient(180deg,var(--night) 0%,rgba(6,9,18,0) 22%,rgba(6,9,18,0) 55%,rgba(6,9,18,.9) 100%);pointer-events:none}
+[dir=rtl] .feature figure::after{background:radial-gradient(ellipse 60% 55% at 85% 85%,rgba(6,9,18,.7),rgba(6,9,18,0) 70%),linear-gradient(180deg,var(--night) 0%,rgba(6,9,18,0) 22%,rgba(6,9,18,0) 55%,rgba(6,9,18,.9) 100%)}
+.feature-copy{position:absolute;inset-inline:0;bottom:clamp(20px,5vw,64px);z-index:2}
+.feature-copy h2{max-width:14ch;text-shadow:0 2px 16px rgba(6,9,18,.6)}
+.feature-copy .eyebrow{text-shadow:0 1px 8px rgba(6,9,18,.95),0 0 2px rgba(6,9,18,.9)}
+.feature-copy .lede{margin-top:14px;color:#C9D2E0}
+.hs{position:absolute;z-index:3;transform:translate(-50%,-50%)}
+.hs button{width:28px;height:28px;border-radius:50%;border:1.5px solid #fff;background:rgba(244,181,74,.92);cursor:pointer;position:relative;padding:0;box-shadow:0 0 0 7px rgba(255,255,255,.14);transition:transform .2s,box-shadow .2s}
+.hs button:hover{transform:scale(1.08);box-shadow:0 0 0 9px rgba(255,255,255,.2)}
+.hs .tip{position:absolute;left:50%;bottom:calc(100% + 14px);transform:translateX(-50%);width:230px;padding:14px 16px;border-radius:10px;background:rgba(8,12,22,.94);border:1px solid var(--rule);text-align:start;opacity:0;pointer-events:none;transition:opacity .2s}
+.hs .tip strong{display:block;font-family:var(--display);font-stretch:112%;font-size:15px;margin-bottom:4px}
+.hs .tip p{font-size:13px;color:var(--muted);line-height:1.5}
+.hs:hover .tip,.hs button:focus-visible+.tip,.hs.open .tip{opacity:1}
+@media (max-width:700px){.feature figure{aspect-ratio:4/5}.feature img{object-position:45% 50%}.hs{display:none}}
+
+/* ---------- metrics band ---------- */
+.metrics{border-block:1px solid var(--rule)}
+.metrics .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.metric{padding-block:34px;padding-inline:0 24px;display:flex;flex-direction:column;gap:6px}
+.metric + .metric{padding-inline-start:24px;border-inline-start:1px solid var(--rule)}
+.metric .n{font-family:var(--display);font-stretch:118%;font-weight:600;font-size:clamp(30px,3.4vw,46px);line-height:1;font-variant-numeric:tabular-nums}
+.metric .n small{font-size:.45em;color:var(--sun);margin-inline-start:4px;font-weight:500}
+.metric .l{color:var(--muted);font-size:14px}
+@media (max-width:760px){.metrics .wrap{grid-template-columns:1fr 1fr}.metric:nth-child(3){padding-inline-start:0;border-inline-start:0}.metric:nth-child(n+3){border-top:1px solid var(--rule)}}
+
+/* ---------- system diagram ---------- */
+section{padding-block:clamp(72px,10vw,140px)}
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);align-items:center}
+@media (max-width:920px){.split{grid-template-columns:1fr}}
+.split h2{margin-top:14px}
+.split .lede{margin-top:18px}
+.layers{margin-top:32px;display:grid;gap:0;border-top:1px solid var(--rule)}
+.layer{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.layer dt{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sun);padding-top:3px}
+.layer dd{margin:0;color:var(--muted);font-size:15px}
+.layer dd b{color:var(--fg);font-weight:500}
+.console{background:var(--deep);border:1px solid var(--rule);border-radius:16px;padding:clamp(16px,2.4vw,28px);min-width:0}
+.console-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.06em}
+.console-head .time{font-size:28px;color:var(--fg);letter-spacing:0;font-variant-numeric:tabular-nums}
+.flow{width:100%;height:auto;display:block;margin-block:10px 6px}
+.flow .wire{fill:none;stroke:var(--rule);stroke-width:2}
+.flow .live{fill:none;stroke-linecap:round;opacity:.95;stroke-dasharray:3 11;animation:flowdash .9s linear infinite;transition:stroke-width .3s,opacity .3s;filter:drop-shadow(0 0 3px currentColor)}
+.flow .live.rev{animation-direction:reverse}
+@keyframes flowdash{to{stroke-dashoffset:-14}}
+.flow .ring{fill:none;stroke:#2A3650;stroke-width:2}
+.flow .ring.on{stroke:var(--sun)}
+.playbtn{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--rule);background:var(--night);color:var(--fg);cursor:pointer;font-size:12px;flex:none}
+.playbtn:hover{border-color:var(--sun)}
+.product img.prod{width:100%;aspect-ratio:4/3;height:auto;object-fit:cover;display:block;border-radius:10px;background:#EEF1F5}
+.flow .live.idle{opacity:0}
+.flow .node{fill:var(--night);stroke:#2A3650;stroke-width:1.5}
+.flow .ico{fill:none;stroke:var(--fg);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.flow text{font-family:var(--mono);fill:var(--muted);font-size:12px}
+.flow .val{fill:var(--fg);font-size:15px;font-weight:500}
+.controls{display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;margin-top:8px}
+input[type=range]{width:100%;accent-color:var(--sun);min-width:0}
+.toggle{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--muted);cursor:pointer;white-space:nowrap}
+.toggle input{accent-color:var(--off);width:16px;height:16px}
+.soc{margin-top:16px;display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:12px;color:var(--muted)}
+.soc .bar{flex:1;height:6px;border-radius:6px;background:var(--rule);overflow:hidden}
+.soc .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--cell),var(--ok));width:50%;transition:width .3s}
+.note{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:12px;letter-spacing:.03em}
+
+/* ---------- spec sheet (paper) ---------- */
+.paper{background:var(--paper);color:var(--ink)}
+.paper .eyebrow{color:#3159A8}
+.paper .lede{color:var(--ink-muted)}
+.spec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.spec-head h2{margin-top:14px;max-width:16ch}
+.products{margin-top:48px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:960px){.products{grid-template-columns:1fr}}
+.product{background:#fff;border:1px solid #D7DCE4;border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.product .tag{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted)}
+.product h3{font-size:24px}
+.product canvas{width:100%;height:120px;display:block;border-radius:8px;background:#F3F5F8}
+.product table{width:100%;border-collapse:collapse;font-size:14px}
+.product table{color:var(--ink)}
+.product td{color:var(--ink);padding:9px 0;border-top:1px solid #E3E7ED;vertical-align:top}
+.product td:last-child{text-align:right;font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums;padding-inline-start:12px}
+[dir=rtl] .product td:last-child{text-align:left}
+.product td:first-child{color:var(--ink-muted)}
+
+/* ---------- estimator ---------- */
+.est{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+@media (max-width:860px){.est{grid-template-columns:1fr}}
+.est h2{margin-top:14px}
+.est .lede{margin-top:18px}
+.est-card{background:var(--deep);border:1px solid var(--rule);border-radius:16px;padding:clamp(20px,3vw,34px)}
+.est-card label{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:14px;color:var(--muted);margin-bottom:12px}
+.est-card label output{font-family:var(--mono);font-size:22px;color:var(--fg)}
+.est-out{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--rule)}
+.est-out div{padding-block:18px 0;padding-inline:0 12px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.est-out div + div{padding-inline-start:14px;border-inline-start:1px solid var(--rule)}
+.est-out b{font-family:var(--display);font-stretch:115%;font-size:clamp(22px,2.6vw,32px);font-weight:600;font-variant-numeric:tabular-nums}
+.est-out span{font-size:13px;color:var(--muted)}
+@media (max-width:420px){.est-out{grid-template-columns:1fr}.est-out div + div{padding-inline-start:0;border-inline-start:0}}
+
+/* ---------- process ---------- */
+.steps{margin-top:48px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--rule)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.step{padding-block:26px 0;padding-inline:0 22px;display:flex;flex-direction:column;gap:10px}
+.step .k{font-family:var(--mono);font-size:12px;color:var(--sun);letter-spacing:.1em}
+.step p{color:var(--muted);font-size:15px}
+
+/* ---------- coverage ---------- */
+.coverage{border-top:1px solid var(--rule)}
+.coverage h2{margin-top:14px;max-width:18ch}
+.coverage .lede{margin-top:18px}
+.cov-grid{margin-top:48px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(28px,5vw,72px);align-items:start}
+@media (max-width:860px){.cov-grid{grid-template-columns:1fr}}
+.region h3{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sun);font-weight:500;font-stretch:100%;padding-bottom:14px;border-bottom:1px solid var(--rule);line-height:1.4}
+.cities{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
+.cities.wide{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cities li{padding:13px 0;border-bottom:1px solid var(--rule);font-family:var(--display);font-stretch:110%;font-size:clamp(17px,1.5vw,21px);font-weight:500;line-height:1.3}
+@media (max-width:560px){.cities.wide{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cov-more{margin-top:28px;color:var(--muted);font-size:15px}
+
+/* ---------- close ---------- */
+.close{position:relative;overflow:hidden;border-top:1px solid var(--rule);text-align:center}
+.close::before{content:"";position:absolute;left:50%;bottom:-60%;width:140%;aspect-ratio:2/1;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(244,181,74,.28),rgba(127,178,255,.08) 55%,transparent 75%);pointer-events:none}
+.close h2{position:relative;max-width:18ch;margin-inline:auto}
+.close .lede{position:relative;margin:18px auto 0}
+.close .ctas{position:relative;margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+footer{border-top:1px solid var(--rule);padding-block:36px;color:var(--muted);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer nav{display:flex;gap:22px;flex-wrap:wrap}
+footer a{text-decoration:none}
+footer a:hover{color:var(--fg)}
+
+
+/* ---------- tap-to-enter gate (unlocks sound for the intro) ---------- */
+.gate{position:fixed;inset:0;z-index:50;display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 60%,rgba(12,19,34,.55),rgba(6,9,18,.96) 70%),url("hero_dark.jpg") center 62%/cover no-repeat,var(--night);transition:opacity .7s ease,visibility .7s}
+.gate.gone{opacity:0;visibility:hidden}
+html:has(.gate:not(.gone)){overflow:hidden}
+.gate-inner{display:flex;flex-direction:column;align-items:center;gap:26px;text-align:center}
+.gate-btn{display:flex;flex-direction:column;align-items:center;gap:6px;padding:20px 38px;border-radius:999px;border:1px solid rgba(244,181,74,.55);background:rgba(6,9,18,.55);backdrop-filter:blur(8px);color:var(--fg);cursor:pointer;transition:border-color .25s,background .25s,transform .25s;box-shadow:0 0 0 0 rgba(244,181,74,.35);animation:gatePulse 2.6s ease-out infinite}
+.gate-btn:hover{border-color:var(--sun);background:rgba(244,181,74,.12);transform:translateY(-1px)}
+.gate-en{font:600 15px/1.2 var(--display);font-stretch:118%;letter-spacing:.22em;text-transform:uppercase;color:var(--sun)}
+.gate-rtl{font:400 14px/1.4 "Vazirmatn",var(--body);color:#C9D2E0}
+.gate-note{display:inline-flex;align-items:center;gap:7px;font:400 12px/1 var(--mono);letter-spacing:.08em;color:var(--muted)}
+@keyframes gatePulse{0%{box-shadow:0 0 0 0 rgba(244,181,74,.35)}70%{box-shadow:0 0 0 18px rgba(244,181,74,0)}100%{box-shadow:0 0 0 0 rgba(244,181,74,0)}}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001s!important;animation-iteration-count:1!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+<style>
+.wa-float{position:fixed;inset-inline-end:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;align-items:center;gap:10px;height:54px;padding:0 20px 0 16px;border-radius:999px;background:#25D366;color:#05210F;font:600 15px/1 var(--body);text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s}
+.wa-float:hover{transform:translateY(-2px)}
+.wa-float svg{width:24px;height:24px;flex:none}
+@media (max-width:520px){.wa-float span{display:none}.wa-float{padding:0;width:56px;justify-content:center}}
+.est-apps{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+.region p{color:var(--muted);line-height:1.9}
+.region a{color:var(--fg)}
+</style>
+</head>
+<body>
+
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Eversol home" data-i18n-attr="aria-label:nav.home">
+      <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="6" fill="#F4B54A"/><path d="M2 17.5h22" stroke="#060912" stroke-width="3"/><path d="M2 17.5h22" stroke="#7FB2FF" stroke-width="1.2"/></svg>
+      EVERSOL
+    </a>
+    <ul>
+      <li><a href="#system" data-i18n="nav.system">System</a></li>
+      <li><a href="#technology" data-i18n="nav.tech">Technology</a></li>
+      <li><a href="#estimate" data-i18n="nav.est">Your system</a></li>
+      <li><a href="#process" data-i18n="nav.proc">Installation</a></li>
+      <li><a href="#coverage" data-i18n="nav.show">Showroom</a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" class="on" aria-pressed="true" lang="en">EN</button><span class="sep" aria-hidden="true">·</span><button type="button" data-lang="ku" aria-pressed="false" lang="ckb" dir="rtl">کوردی</button><span class="sep" aria-hidden="true">·</span><button type="button" data-lang="ar" aria-pressed="false" lang="ar" dir="rtl">العربية</button>
+    </div>
+    <a class="btn btn-sun wa-link" href="https://wa.me/9647759899000" target="_blank" rel="noopener" data-i18n="nav.quote">Get a quote</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="gate" id="gate" role="dialog" aria-label="Enter the Eversol site">
+    <div class="gate-inner">
+      <svg width="54" height="54" viewBox="0 0 26 26" aria-hidden="true"><circle cx="13" cy="13" r="6" fill="#F4B54A"/><path d="M2 17.5h22" stroke="#060912" stroke-width="3"/><path d="M2 17.5h22" stroke="#7FB2FF" stroke-width="1.2"/></svg>
+      <button class="gate-btn" id="enter" type="button" autofocus>
+        <span class="gate-en">Tap to enter</span>
+        <span class="gate-rtl" dir="rtl" lang="ckb">کرتە بکە بۆ چوونەژوورەوە</span>
+        <span class="gate-rtl" dir="rtl" lang="ar">اضغط للدخول</span>
+      </button>
+      <p class="gate-note"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg> Best with sound</p>
+    </div>
+  </div>
+  <section class="hero" id="hero">
+    <div class="hero-media">
+      <img class="hero-img" src="hero_dark.jpg" alt="Erbil neighbourhood at night during a blackout: dark windows, moonlit solar panels on the flat roofs" width="2400" height="1340" fetchpriority="high" data-i18n-attr="alt:hero.alt">
+      <img class="hero-img lit" src="hero_lit.jpg" alt="" width="2400" height="1340" aria-hidden="true">
+    </div>
+    <div class="scrim" aria-hidden="true"></div>
+    <canvas id="spark" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <div class="wm" id="wm" aria-label="Eversol">EVERSOL</div>
+      <h1 data-i18n="hero.h1">When the grid goes dark, your street stays lit.</h1>
+      <p class="sub" data-i18n="hero.sub">Solar panels, battery storage and hybrid inverters, working as one system for homes and businesses in Iraq.</p>
+      <div class="ctas">
+        <a class="btn btn-sun" href="#estimate" data-i18n="hero.cta1">Design my system</a>
+        <a class="btn btn-ghost" href="#system" data-i18n="hero.cta2">See how it works</a>
+      </div>
+    </div>
+    <div class="hero-foot">
+      <div class="readout">
+        <span class="chip"><i class="dot"></i><span data-i18n="chip.grid">National grid</span><b data-i18n="chip.off">Offline</b></span>
+        <span class="chip"><i class="dot on"></i><span>Eversol</span><b data-i18n="chip.on">Online</b></span>
+      </div>
+      <div class="hero-btns">
+        <button class="replay sound" id="sound" type="button" aria-pressed="false"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path class="mute" d="M16 9l6 6M22 9l-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span data-i18n="sound">Sound</span></button>
+        <button class="replay" id="replay" type="button" data-i18n="replay">Replay</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="feature">
+    <figure>
+      <img src="rooftop.jpg" alt="Modern single-storey home at dusk with black solar panels on the garage roof and warm light in every window" width="1500" height="856" data-i18n-attr="alt:feature.alt">
+      <div class="hs" style="left:40%;top:28%"><button type="button" aria-label="Solar array details" data-i18n-attr="aria-label:hs1.aria"></button><div class="tip"><strong data-i18n="hs1.t">730 W solar panels</strong><p data-i18n="hs1.p">Double-glass, bifacial modules that also collect light from the back. <bdi dir="ltr">23.7 %</bdi> efficiency.</p></div></div>
+      <div class="hs" style="left:70.5%;top:73%"><button type="button" aria-label="Battery details" data-i18n-attr="aria-label:hs2.aria"></button><div class="tip"><strong data-i18n="hs2.t">16 kWh LiFePO₄ battery</strong><p data-i18n="hs2.p">REPT Grade A cells and a PACE battery management system. <bdi dir="ltr">95 %</bdi> usable, <bdi dir="ltr">6,000+</bdi> cycles, no maintenance.</p></div></div>
+      <div class="hs" style="left:47%;top:50%"><button type="button" aria-label="Home control details" data-i18n-attr="aria-label:hs3.aria"></button><div class="tip"><strong data-i18n="hs3.t">Whole-home backup</strong><p data-i18n="hs3.p">Air conditioning, water pump and lights keep running through a power cut. The engineer sizes the system to your appliances.</p></div></div>
+    </figure>
+    <div class="feature-copy">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="feature.eyebrow">Residential systems</p>
+        <h2 style="margin-top:12px" data-i18n="feature.h2">Built for the home you’re proud of.</h2>
+        <p class="lede" data-i18n="feature.lede">Clean lines on the roof. A quiet box on the wall. No generator cables across the street.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="metrics">
+    <div class="wrap">
+      <div class="metric"><span class="n">30<small data-i18n="m1.u">yrs</small></span><span class="l" data-i18n="m1.l">Panel performance warranty</span></div>
+      <div class="metric"><span class="n"><bdi dir="ltr">730<small>W</small></bdi></span><span class="l" data-i18n="m2.l">Per panel, <bdi dir="ltr">23.7 %</bdi> efficiency</span></div>
+      <div class="metric"><span class="n"><bdi dir="ltr">16<small>kWh</small></bdi></span><span class="l" data-i18n="m3.l">LiFePO₄ battery, <bdi dir="ltr">95 %</bdi> usable</span></div>
+      <div class="metric"><span class="n"><bdi dir="ltr">11<small>kW</small></bdi></span><span class="l" data-i18n="m4.l">Hybrid inverter with Wi-Fi monitoring</span></div>
+    </div>
+  </div>
+
+  <section id="system">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow" data-i18n="sys.eyebrow">The Eversol system</p>
+        <h2 data-i18n="sys.h2">One system. Three layers.</h2>
+        <p class="lede" data-i18n="sys.lede">Panels, battery and inverter are chosen to work together as one system, so every watt your roof makes goes where it is worth the most.</p>
+        <dl class="layers">
+          <div class="layer"><dt data-i18n="l.gen">Generate</dt><dd data-i18n="l1.dd"><b>730 W panels.</b> The only solar panels in the market with 730 W and <bdi dir="ltr">23.7 %</bdi> efficiency. Double-glass, bifacial, 8-busbar, Grade A.</dd></div>
+          <div class="layer"><dt data-i18n="l.store">Store</dt><dd data-i18n="l2.dd"><b>16 kWh battery.</b> Lithium iron phosphate, the safest lithium chemistry. REPT Grade A cells, <bdi dir="ltr">6,000+</bdi> cycles.</dd></div>
+          <div class="layer"><dt data-i18n="l.ctrl">Control</dt><dd data-i18n="l3.dd"><b>11 kW hybrid inverter.</b> Pure sine wave power with built-in Wi-Fi, so you can follow your system from your phone.</dd></div>
+        </dl>
+      </div>
+
+      <div class="console" aria-label="Simulated day of an Eversol home" data-i18n-attr="aria-label:console.aria">
+        <div class="console-head">
+          <span data-i18n="console.head">SIMULATED DAY · 7.3 kW ROOF · 16 kWh BATTERY</span>
+          <span class="time num" id="clock">13:00</span>
+        </div>
+        <svg class="flow" viewBox="0 0 720 380" role="img" aria-label="Energy flow between panels, inverter, home, battery and grid" data-i18n-attr="aria-label:flow.aria">
+          <defs><clipPath id="cc"><circle r="38"/></clipPath><clipPath id="cr"><rect x="-32" y="-32" width="64" height="64" rx="12"/></clipPath></defs>
+          <path class="wire" d="M150 95 C 260 95, 260 190, 330 190"/>
+          <path class="wire" d="M390 190 C 460 190, 460 95, 570 95"/>
+          <path class="wire" d="M150 290 C 260 290, 260 190, 330 190"/>
+          <path class="wire" d="M390 190 C 460 190, 460 290, 570 290"/>
+          <path class="live" id="l-pv"   d="M150 95 C 260 95, 260 190, 330 190" stroke="#F4B54A"/>
+          <path class="live" id="l-home" d="M390 190 C 460 190, 460 95, 570 95" stroke="#F4B54A"/>
+          <path class="live" id="l-bat"  d="M150 290 C 260 290, 260 190, 330 190" stroke="#5FD3A0"/>
+          <path class="live" id="l-grid" d="M390 190 C 460 190, 460 290, 570 290" stroke="#7FB2FF"/>
+
+          <g transform="translate(110 95)"><image href="node_panel.jpg" x="-38" y="-38" width="76" height="76" clip-path="url(#cc)" preserveAspectRatio="xMidYMid slice"/><circle class="ring" id="n-pv" r="39"/></g>
+          <text x="110" y="28" text-anchor="middle" data-i18n="n.pv">PANELS</text><text class="val num" id="v-pv" x="110" y="158" text-anchor="middle">0.0 kW</text>
+
+          <g transform="translate(360 190)"><image href="node_inverter.jpg" x="-32" y="-32" width="64" height="64" clip-path="url(#cr)" preserveAspectRatio="xMidYMid slice"/><rect class="ring on" id="n-core" x="-33" y="-33" width="66" height="66" rx="13"/></g>
+          <text x="360" y="252" text-anchor="middle" data-i18n="n.inv">INVERTER</text>
+
+          <g transform="translate(610 95)"><image href="node_home.jpg" x="-38" y="-38" width="76" height="76" clip-path="url(#cc)" preserveAspectRatio="xMidYMid slice"/><circle class="ring" id="n-home" r="39"/></g>
+          <text x="610" y="28" text-anchor="middle" data-i18n="n.home">HOME</text><text class="val num" id="v-home" x="610" y="158" text-anchor="middle">0.0 kW</text>
+
+          <g transform="translate(110 290)"><image href="node_battery.jpg" x="-38" y="-38" width="76" height="76" clip-path="url(#cc)" preserveAspectRatio="xMidYMid slice"/><circle class="ring" id="n-bat" r="39"/></g>
+          <text x="110" y="358" text-anchor="middle" data-i18n="n.bat">BATTERY</text><text class="val num" id="v-bat" x="110" y="232" text-anchor="middle">0.0 kW</text>
+
+          <g transform="translate(610 290)"><image href="node_grid.jpg" x="-38" y="-38" width="76" height="76" clip-path="url(#cc)" preserveAspectRatio="xMidYMid slice"/><circle class="ring" id="n-grid" r="39"/></g>
+          <text x="610" y="358" text-anchor="middle" data-i18n="n.grid">GRID</text><text class="val" id="v-grid" x="610" y="232" text-anchor="middle">0.0 kW</text>
+        </svg>
+        <div class="controls">
+          <button class="playbtn" id="play" type="button" aria-label="Pause the simulated day">❚❚</button>
+          <input type="range" id="hour" min="0" max="95" value="52" aria-label="Time of day" data-i18n-attr="aria-label:hour.aria">
+          <label class="toggle" for="outage"><input type="checkbox" id="outage" checked> <span data-i18n="outage">Grid outage</span></label>
+        </div>
+        <div class="soc"><span data-i18n="soc">BATTERY</span><span class="bar"><i id="socBar"></i></span><span class="num" id="socTxt">50%</span></div>
+        <p class="note" id="status">Drag through the day. Sample model for illustration, not a quote.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="paper" id="technology">
+    <div class="wrap">
+      <div class="spec-head">
+        <div>
+          <p class="eyebrow" data-i18n="tech.eyebrow">Technology</p>
+          <h2 data-i18n="tech.h2">The equipment we install.</h2>
+        </div>
+        <p class="lede" data-i18n="tech.lede">Panels, batteries and inverters installed by Eversol, with the specifications from our technical team.</p>
+      </div>
+      <div class="products">
+        <article class="product">
+          <span class="tag" data-i18n="l.gen">Generate</span>
+          <h3 data-i18n="p1.h"><bdi dir="ltr">730 W</bdi> Panel</h3>
+          <img class="prod" src="prod_panel.jpg" alt="Eversol 730 W double-glass bifacial solar panel" width="1000" height="750" loading="lazy">
+          <table>
+            <tr><td data-i18n="p1.r1">Rated power</td><td dir="ltr">730 W</td></tr>
+            <tr><td data-i18n="p1.r2">Efficiency</td><td dir="ltr">23.7 %</td></tr>
+            <tr><td data-i18n="p1.r3">Design</td><td data-i18n="p1.v3">Double-glass bifacial, 8-busbar, Grade A</td></tr>
+            <tr><td data-i18n="p1.r4">Size</td><td dir="ltr">238 × 135 cm</td></tr>
+            <tr><td data-i18n="p1.r5">Warranty</td><td data-i18n="p1.v5">15-yr product · 30-yr performance</td></tr>
+          </table>
+        </article>
+        <article class="product">
+          <span class="tag" data-i18n="l.store">Store</span>
+          <h3 data-i18n="p2.h"><bdi dir="ltr">16 kWh</bdi> Battery</h3>
+          <img class="prod" src="prod_battery.jpg" alt="Eversol 16 kWh LiFePO4 home battery" width="1000" height="750" loading="lazy">
+          <table>
+            <tr><td data-i18n="p2.r1">Chemistry</td><td dir="ltr">LiFePO₄</td></tr>
+            <tr><td data-i18n="p2.r2">Capacity</td><td dir="ltr">16 kWh</td></tr>
+            <tr><td data-i18n="p2.r3">Cells / BMS</td><td dir="ltr">REPT Grade A · PACE</td></tr>
+            <tr><td data-i18n="p2.r4">Depth of discharge</td><td dir="ltr">95 % · 6,000+ cycles</td></tr>
+            <tr><td data-i18n="p2.r5">Warranty</td><td data-i18n="p2.v5">5 years</td></tr>
+          </table>
+        </article>
+        <article class="product">
+          <span class="tag" data-i18n="l.ctrl">Control</span>
+          <h3 data-i18n="p3.h"><bdi dir="ltr">11 kW</bdi> Hybrid Inverter</h3>
+          <img class="prod" src="prod_inverter.jpg" alt="Eversol 11 kW hybrid inverter" width="1000" height="750" loading="lazy">
+          <table>
+            <tr><td data-i18n="p3.r1">Type</td><td data-i18n="p3.v1">Hybrid / off-grid, pure sine wave</td></tr>
+            <tr><td data-i18n="p3.r2">Output</td><td dir="ltr">11 kW</td></tr>
+            <tr><td data-i18n="p3.r3">PV input</td><td dir="ltr">500 V max · MPPT 120–450 V</td></tr>
+            <tr><td data-i18n="p3.r4">Battery</td><td dir="ltr">48 V · 220 A charging</td></tr>
+            <tr><td data-i18n="p3.r5">Warranty</td><td data-i18n="p3.v5">3 years</td></tr>
+          </table>
+        </article>
+      </div>
+      <p class="note" style="margin-top:24px" data-i18n="prod.note">Warranty terms and conditions apply. Panel warranty includes repair; battery warranty includes BMS replacement and cell repair; inverter warranty is repair only, with software updates.</p>
+    </div>
+  </section>
+
+  <section id="estimate">
+    <div class="wrap est">
+      <div>
+        <p class="eyebrow" data-i18n="est.eyebrow">Your system</p>
+        <h2 data-i18n="est.h2">What would your home need?</h2>
+        <p class="lede" data-i18n="est.lede">Tell us your city, how many air conditioners you have (inverter or regular), your other big appliances and your hours of power cuts. Our WhatsApp assistant answers right away, and an engineer confirms the design after a free site survey.</p>
+      </div>
+      <div class="est-card">
+        <p class="lede" data-i18n="est.price">Prices are given after the free site survey.</p>
+        <div style="margin-top:22px"><a class="btn btn-sun wa-link" href="https://wa.me/9647759899000" target="_blank" rel="noopener" data-i18n="est.cta">Chat with us on WhatsApp</a></div>
+        <p class="note" style="margin-top:28px" data-i18n="est.app">Or size your system yourself in the Eversol app:</p>
+        <div class="est-apps"><a class="btn btn-ghost" href="https://play.google.com/store/apps/details?id=com.eversoliq.app" target="_blank" rel="noopener">Google Play</a><a class="btn btn-ghost" href="https://apps.apple.com/app/id6824715027" target="_blank" rel="noopener">App Store</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="proc.eyebrow">Installation</p>
+      <h2 style="margin-top:14px;max-width:18ch" data-i18n="proc.h2">From survey to switch-on in four steps.</h2>
+      <div class="steps">
+        <div class="step"><span class="k" data-i18n="s1.k">STEP 1</span><h3 data-i18n="s1.h">Site survey</h3><p data-i18n="s1.p">An engineer visits to check your roof or ground space, your power board and your hours of power cuts.</p></div>
+        <div class="step"><span class="k" data-i18n="s2.k">STEP 2</span><h3 data-i18n="s2.h">System design</h3><p data-i18n="s2.p">We size the panels, battery and inverter to your appliances and the way you use power.</p></div>
+        <div class="step"><span class="k" data-i18n="s3.k">STEP 3</span><h3 data-i18n="s3.h">Installation</h3><p data-i18n="s3.p">Eversol technicians install and configure the system, including the Wi-Fi connection.</p></div>
+        <div class="step"><span class="k" data-i18n="s4.k">STEP 4</span><h3 data-i18n="s4.h">Monitoring</h3><p data-i18n="s4.p">Follow your system on your phone over Wi-Fi. After-sales service and warranty are handled from our showroom in Erbil.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="coverage" id="coverage">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="cov.eyebrow">Showroom</p>
+      <h2 data-i18n="cov.h2">Visit us in Erbil.</h2>
+      <p class="lede" data-i18n="cov.lede">120 Meter Road, opposite the Newroz City apartments, Erbil.</p>
+      <div class="cov-grid">
+        <div class="region">
+          <h3 data-i18n="cov.hours.h">Opening hours</h3>
+          <p data-i18n="cov.hours">Saturday – Thursday, 8:30 AM – 8:00 PM. Closed Friday.</p>
+        </div>
+        <div class="region">
+          <h3 data-i18n="cov.call.h">Call or WhatsApp</h3>
+          <p><bdi dir="ltr"><a href="https://wa.me/9647750424747">+964 775 042 4747</a></bdi><br><bdi dir="ltr"><a href="https://wa.me/9647704459329">+964 770 445 9329</a></bdi><br><bdi dir="ltr"><a href="tel:+9647500424747">+964 750 042 4747</a></bdi> <span data-i18n="cov.callonly">(calls only)</span><br><a href="mailto:eversoliq@gmail.com">eversoliq@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="ctas" style="margin-top:28px"><a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&query=Newroz+City+120+Meter+Road+Erbil" target="_blank" rel="noopener" data-i18n="cov.map">Open in Google Maps</a></div>
+    </div>
+  </section>
+
+  <section class="close">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="close.eyebrow">Erbil · Kurdistan Region</p>
+      <h2 style="margin-top:14px" data-i18n="close.h2">Light the whole house. Then the whole street.</h2>
+      <p class="lede" data-i18n="close.lede">Talk to an Eversol engineer about your home, shop or factory.</p>
+      <div class="ctas"><a class="btn btn-sun wa-link" href="https://wa.me/9647759899000" target="_blank" rel="noopener" data-i18n="nav.quote">Get a quote</a><a class="btn btn-ghost" href="#technology" data-i18n="close.cta2">View specifications</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span data-i18n="foot.copy">© 2026 Eversol · 120 Meter Road, Erbil</span>
+    <nav><a href="#system" data-i18n="nav.system">System</a><a href="#technology" data-i18n="nav.tech">Technology</a><a href="#estimate" data-i18n="nav.est">Your system</a><a href="#process" data-i18n="nav.proc">Installation</a><a href="https://gilgamesh.studio/eversol-privacy/" data-i18n="nav.privacy">Privacy</a></nav>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" href="https://wa.me/9647759899000" target="_blank" rel="noopener" aria-label="Chat with Eversol on WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3z"/></svg><span data-i18n="wa.float">Ask Eversol</span></a>
+
+<script>
+(function(){
+  'use strict';
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = id => document.getElementById(id);
+  const nav = $('nav');
+  const onScroll = () => nav.classList.toggle('solid', scrollY > 40);
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  /* =========== i18n =========== */
+  // English is captured from the markup itself; KU/AR override by key. Dynamic strings (JS-generated) live under 'dyn' keys in all three.
+  const I18N = {
+    en: {
+      'st.empty':'Battery empty. Non-priority circuits shed until sunrise.',
+      'st.charge':'Roof covers the house and charges the Vault.',
+      'st.fullOut':'Vault full. Surplus held back during the outage.',
+      'st.fullExp':'Vault full. Surplus exported to the grid.',
+      'st.batOut':'Grid is down. The Vault is running the house.',
+      'st.batPeak':'Evening peak. The Vault covers it before the grid.',
+      'st.grid':'Drawing from the grid.',
+      'st.sample':'Sample model for illustration.',
+      'st.idle':'Drag through the day. Sample model for illustration, not a quote.',
+      'v.offline':'OFFLINE',
+      'wave':'230 V · 50 Hz · pure sine',
+      'st.charge':'Roof covers the house and charges the battery.',
+      'st.fullOut':'Battery full. Surplus held back during the outage.',
+      'st.fullExp':'Battery full. The roof covers the house.',
+      'st.batOut':'Grid is down. The battery is running the house.',
+      'st.batPeak':'Evening peak. The battery covers it before the grid.',
+      'wave':'Pure sine wave output',
+      'wa.msg':'Hello Eversol, I would like to know more about your solar systems.'
+    },
+    ku: {
+      'nav.home':'سەرەتای Eversol',
+      'nav.system':'سیستەم','nav.tech':'تەکنەلۆژیا','nav.est':'خەمڵاندن','nav.proc':'دامەزراندن','nav.quote':'نرخ وەربگرە',
+      'hero.alt':'گەڕەکێک لە هەولێر لە شەوی بڕانی کارەبادا: پەنجەرە تاریکەکان و پانێڵی خۆر لەژێر ڕووناکیی مانگ',
+      'hero.h1':'کاتێک کارەبا دەبڕێت، شەقامەکەت ڕووناک دەمێنێتەوە.',
+      'hero.sub':'پانێڵی خۆر، پاتریی هەڵگرتن و کۆنتڕۆڵی زیرەک، وەک یەک سیستەم بۆ ماڵ و بازرگانییەکان لە سەرانسەری عێراق دیزاین کراون.',
+      'hero.cta1':'سیستەمەکەم دیزاین بکە','hero.cta2':'ببینە چۆن کار دەکات',
+      'chip.grid':'کارەبای نیشتمانی','chip.off':'بڕاوە','chip.on':'کاردەکات','replay':'دووبارە','sound':'دەنگ',
+      'feature.alt':'ماڵێکی نوێی یەک نهۆمی لە کاتی خۆرئاوابووندا، پانێڵی خۆری ڕەش لەسەر سەربانی گەراج و ڕووناکیی گەرم لە هەموو پەنجەرەیەک',
+      'hs1.aria':'وردەکاریی پانێڵە خۆرییەکان','hs2.aria':'وردەکاریی پاتری','hs3.aria':'وردەکاریی کۆنتڕۆڵی ماڵ',
+      'hs1.t':'پانێڵی خۆری تەواو ڕەش','hs1.p':'مۆدیوڵی تەواو ڕەش لەسەر چوارچێوەی لار، ڕووەو خۆری عێراق. <bdi dir="ltr">8.8 kW</bdi> لە 20 پانێڵ لەسەر ئەم سەربانە.',
+      'hs2.t':'پاتریی Eversol Vault','hs2.p':'هەڵگرتنی LFP لەسەر دیوار. لە کەمتر لە <bdi dir="ltr">10 ms</bdi> دەستبەکار دەبێت، بۆیە کاتژمێر و ڕاوتەرەکان هەستی پێناکەن.',
+      'hs3.t':'پاڵپشتیی تەواوی ماڵ','hs3.p':'سپلیت، پەمپی ئاو و گڵۆپەکان لە کاتی بڕانی کارەبادا کار دەکەن. تۆ خۆت سەرکیتە گرنگەکان هەڵدەبژێریت.',
+      'feature.eyebrow':'سیستەمی نیشتەجێبوون','feature.h2':'بۆ ئەو ماڵە دروستکراوە کە شانازیی پێوە دەکەیت.',
+      'feature.lede':'هێڵی پاک لەسەر سەربان. سندوقێکی بێدەنگ لەسەر دیوار. بێ وایەری مۆلیدە بە شەقامدا.',
+      'm1.u':'ساڵ','m1.l':'گەرەنتیی کارایی پانێڵ','m2.l':'گۆڕین کاتێک کارەبا دەبڕێت','m3.l':'بۆ هاوینی عێراق پۆلێنکراوە','m4.l':'چاودێریی لە دوورەوە لەلایەن تیمە ناوخۆییەکەمان',
+      'sys.eyebrow':'سیستەمی Eversol','sys.h2':'یەک سیستەم. سێ چین.',
+      'sys.lede':'زۆربەی دامەزرێنەران پارچە دەفرۆشن. ئێمە پانێڵ، هەڵگرتن و کۆنتڕۆڵەر پێکەوە دیزاین دەکەین، تا هەر واتێک سەربان بەرهەمی دەهێنێت بچێتە ئەو شوێنەی زۆرترین بەهای هەیە.',
+      'l.gen':'بەرهەمهێنان','l.store':'هەڵگرتن','l.ctrl':'کۆنتڕۆڵ',
+      'l1.dd':'<b>پانێڵی Nova 440.</b> خانەی جۆری N کە لە گەرمادا کەمتر لە پانێڵی ئاسایی بەرهەم لەدەست دەدەن.',
+      'l2.dd':'<b>پاتریی Vault.</b> کیمیای لیسیۆم ئایرن فۆسفات. لە ناو ماڵدا سەلامەتە، بۆ 6,000 خول دروستکراوە.',
+      'l3.dd':'<b>ئینڤێرتەری Core و ئەپ.</b> هەر چرکەیەک بڕیار دەدات ماڵەکە کارەبا بدات، شەحن بکات، یان لە تۆڕی کارەبا وەربگرێت.',
+      'console.aria':'ڕۆژێکی نموونەیی ماڵێکی Eversol','console.head':'ڕۆژی نموونەیی · سەربانی <bdi dir="ltr">8.8 kW</bdi> · پاتریی Vault <bdi dir="ltr">10 kWh</bdi>',
+      'flow.aria':'ڕەوتی وزە لە نێوان پانێڵ، ئینڤێرتەر، ماڵ، پاتری و تۆڕی کارەبا',
+      'n.pv':'پانێڵەکان','n.home':'ماڵ','n.grid':'تۆڕ',
+      'hour.aria':'کاتی ڕۆژ','outage':'بڕانی کارەبا','soc':'پاتری',
+      'st.empty':'پاتری بەتاڵە. سەرکیتە ناگرنگەکان تا بەرەبەیان دەکوژێنرێنەوە.',
+      'st.charge':'سەربان ماڵەکە دابین دەکات و Vault شەحن دەکات.',
+      'st.fullOut':'Vault پڕە. زیادەکە لە کاتی بڕاندا ڕادەگیرێت.',
+      'st.fullExp':'Vault پڕە. زیادەکە بۆ تۆڕ دەنێردرێت.',
+      'st.batOut':'کارەبا بڕاوە. Vault ماڵەکە کار پێدەکات.',
+      'st.batPeak':'لووتکەی ئێوارە. Vault پێش تۆڕ دایدەپۆشێت.',
+      'st.grid':'لە تۆڕی کارەبا وەردەگیرێت.',
+      'st.sample':'مۆدێلی نموونەییە بۆ ڕوونکردنەوە.',
+      'st.idle':'بە درێژایی ڕۆژەکە ڕایبکێشە. مۆدێلی نموونەییە بۆ ڕوونکردنەوە، نەک نرخ.',
+      'v.offline':'بڕاوە',
+      'tech.eyebrow':'تەکنەلۆژیا','tech.h2':'بۆ گەرما، تۆز و شەوە درێژەکان ئەندازیاری کراوە.',
+      'tech.lede':'هەر پارچەیەک بۆ کەشوهەوای عێراق هەڵبژێردراوە و تاقیکراوەتەوە: سەربانی <bdi dir="ltr">50 °C</bdi> لە تەممووز، تۆزباوی بەهار و بڕانی ڕۆژانەی کارەبا.',
+      'p1.r1':'جۆری خانە','p1.r2':'توانای پۆلێنکراو','p1.r3':'کارایی مۆدیوڵ','p1.r4':'هاوکۆلکەی گەرمی','p1.r5':'گەرەنتی','p1.v5':'25 ساڵ',
+      'p2.r1':'کیمیا','p2.r2':'توانای بەکارهێنان','p2.r3':'تەمەنی خول','p2.r4':'زۆرترین گەرمیی ژینگە','p2.r5':'فراوان دەکرێت بۆ',
+      'p3.r1':'جۆر','p3.v1':'ئینڤێرتەری هایبرید','p3.r2':'بەرهەمی بەردەوام','p3.r3':'گۆڕینی پاڵپشتی','p3.r4':'بەرزترین کارایی','p3.r5':'چاودێری',
+      'wave':'230 V · 50 Hz · شەپۆلی سینی پاک',
+      'est.eyebrow':'خەمڵاندن','est.h2':'سەربانەکەت پێویستی بە چی دەبێت؟',
+      'est.lede':'ئەوەی مانگانە بۆ کارەبای نیشتمانی و مۆلیدەی گەڕەک دەیدەیت کۆی بکەرەوە. ئێمە سیستەمێکی سەرەتایی بۆت دیاری دەکەین. ئەندازیارێک دوای ڕووپێوی بەخۆڕایی شوێنەکە پشتڕاستی دەکاتەوە.',
+      'est.spend':'خەرجیی مانگانەی کارەبا','est.size':'قەبارەی سیستەم','est.panels':'پانێڵی Nova 440','est.save':'پاشەکەوت لە ساڵێکدا',
+      'est.note':'لەسەر بنەمای <bdi dir="ltr">$0.11</bdi> بۆ هەر kWh ی تێکەڵی کارەبای نیشتمانی و مۆلیدە، <bdi dir="ltr">5.5</bdi> کاتژمێری لووتکەی خۆر و <bdi dir="ltr">80%</bdi> بەرهەمی سیستەم. تەنها خەمڵاندنە.',
+      'est.cta':'ڕووپێوی شوێن داوا بکە',
+      'proc.eyebrow':'دامەزراندن','proc.h2':'لە ڕووپێوەوە تا هەڵکردن بە چوار هەنگاو.',
+      's1.k':'هەنگاوی 1','s2.k':'هەنگاوی 2','s3.k':'هەنگاوی 3','s4.k':'هەنگاوی 4',
+      's1.h':'ڕووپێوی شوێن','s1.p':'سکانی درۆن بۆ سەربانەکەت و پشکنینی تابلۆی کارەبا و ڕێکخستنی مۆلیدەکەت.',
+      's2.h':'دیزاینی سیستەم','s2.p':'مۆدێلی سێبەر و لێکۆڵینەوەی بار، ڕێکخستنی پانێڵ، قەبارەی پاتری و سەرکیتە گرنگەکان دیاری دەکەن.',
+      's3.h':'دامەزراندن','s3.p':'تەکنیکارانی بڕوانامەداری Eversol سیستەمە تەواوەکە دادەمەزرێنن، بە زۆری لە دوو ڕۆژی کاردا.',
+      's4.h':'چاودێری','s4.p':'بەرهەم و پاتری بە زیندوویی لە ئەپەکەدا ببینە. تیمەکەمان پێش تۆ کێشەکان دەبینێت.',
+      'cov.eyebrow':'ناوچەی خزمەتگوزاری','cov.h2':'خزمەتی هەموو عێراق دەکەین.',
+      'cov.lede':'ئەندازیار، دامەزرێنەر و پارچەی یەدەگ لە هەموو هەرێمێک، لە زاخۆوە تا بەسرە.',
+      'cov.north':'باکوور · هەرێمی کوردستان','cov.south':'ناوەڕاست و باشوور',
+      'c.erbil':'هەولێر','c.suli':'سلێمانی','c.duhok':'دهۆک','c.halabja':'هەڵەبجە','c.zakho':'زاخۆ','c.kirkuk':'کەرکووک',
+      'c.baghdad':'بەغدا','c.mosul':'مووسڵ','c.basra':'بەسرە','c.najaf':'نەجەف','c.karbala':'کەربەلا','c.hillah':'حیللە',
+      'c.nasiriyah':'ناسریە','c.amarah':'عەمارە','c.ramadi':'ڕومادی','c.kut':'کووت','c.diwaniyah':'دیوانیە','c.samarra':'سامەڕا',
+      'cov.more':'…و زۆر شار و شارۆچکەی تری سەرانسەری عێراق.',
+      'close.eyebrow':'هەولێر · بەغدا · بەسرە','close.h2':'هەموو ماڵەکە ڕووناک بکەرەوە. پاشان هەموو شەقامەکە.',
+      'close.lede':'لەگەڵ ئەندازیارێکی Eversol قسە بکە دەربارەی ماڵ، دوکان یان کارگەکەت.','close.cta2':'تایبەتمەندییەکان ببینە',
+      'foot.copy':'© 2026 Eversol Energy · هەولێر · بەغدا · بەسرە',
+      'nav.est':'سیستەمەکەت','nav.show':'پێشانگا','nav.privacy':'تایبەتێتی',
+      'hero.sub':'پانێڵی خۆر، پاتریی هەڵگرتن و ئینڤێرتەری هایبرید، وەک یەک سیستەم بۆ ماڵ و بازرگانییەکان لە عێراق.',
+      'hs1.t':'پانێڵی خۆری 730 وات','hs1.p':'پانێڵی دوو شووشەیی و دوو ڕوو، کە ڕووناکی لە پشتیشەوە کۆدەکاتەوە. کارایی <bdi dir="ltr">23.7 %</bdi>.',
+      'hs2.t':'پاتریی LiFePO₄ ـی <bdi dir="ltr">16 kWh</bdi>','hs2.p':'خانەی REPT پلە A و سیستەمی بەڕێوەبردنی پاتریی PACE. <bdi dir="ltr">95 %</bdi> بەکاردێت، زیاتر لە <bdi dir="ltr">6,000</bdi> خول، پێویستی بە چاکسازیی بەردەوام نییە.',
+      'hs3.p':'سپلیت، پەمپی ئاو و گڵۆپەکان لە کاتی بڕانی کارەبادا کار دەکەن. ئەندازیار سیستەمەکە بەپێی ئامێرەکانی ماڵەکەت دیاری دەکات.',
+      'm2.l':'بۆ هەر پانێڵێک، کارایی <bdi dir="ltr">23.7 %</bdi>','m3.l':'پاتریی LiFePO₄، <bdi dir="ltr">95 %</bdi> بەکاردێت','m4.l':'ئینڤێرتەری هایبرید بە چاودێریی Wi-Fi',
+      'sys.lede':'پانێڵ، پاتری و ئینڤێرتەر هەڵبژێردراون بۆ ئەوەی وەک یەک سیستەم پێکەوە کار بکەن، تا هەر واتێک سەربانەکەت بەرهەمی دەهێنێت بچێتە ئەو شوێنەی زۆرترین سوودی هەیە.',
+      'l1.dd':'<b>پانێڵی 730 وات.</b> تاکە پانێڵی خۆر لە بازاڕدا بە 730 وات و کارایی <bdi dir="ltr">23.7 %</bdi>. دوو شووشەیی، دوو ڕوو، 8 باسبار، پلە A.',
+      'l2.dd':'<b>پاتریی <bdi dir="ltr">16 kWh</bdi>.</b> لیسیۆم ئایرن فۆسفات، سەلامەتترین جۆری لیسیۆم. خانەی REPT پلە A، زیاتر لە <bdi dir="ltr">6,000</bdi> خول.',
+      'l3.dd':'<b>ئینڤێرتەری هایبریدی <bdi dir="ltr">11 kW</bdi>.</b> کارەبای شەپۆلی سینیی پاک بە Wi-Fi ـی ناوخۆیی، بۆ ئەوەی لە مۆبایلەکەتەوە سیستەمەکەت ببینیت.',
+      'console.head':'ڕۆژی نموونەیی · سەربانی <bdi dir="ltr">7.3 kW</bdi> · پاتریی <bdi dir="ltr">16 kWh</bdi>',
+      'n.bat':'پاتری','n.inv':'ئینڤێرتەر',
+      'st.charge':'سەربان ماڵەکە دابین دەکات و پاتری شەحن دەکات.','st.fullOut':'پاتری پڕە. زیادەکە لە کاتی بڕاندا ڕادەگیرێت.','st.fullExp':'پاتری پڕە. سەربان ماڵەکە دابین دەکات.',
+      'st.batOut':'کارەبا بڕاوە. پاتری ماڵەکە کار پێدەکات.','st.batPeak':'لووتکەی ئێوارە. پاتری پێش تۆڕ دایدەپۆشێت.',
+      'tech.h2':'ئەو ئامێرانەی دایاندەمەزرێنین.','tech.lede':'ئەو پانێڵ، پاتری و ئینڤێرتەرانەی Eversol دایاندەمەزرێنێت، بە تایبەتمەندییەکانی تیمی تەکنیکیمان.',
+      'p1.r1':'توانای پۆلێنکراو','p1.r2':'کارایی','p1.r3':'دیزاین','p1.v3':'دوو شووشەیی و دوو ڕوو، 8 باسبار، پلە A','p1.r4':'قەبارە','p1.r5':'گەرەنتی','p1.v5':'15 ساڵ بەرهەم · 30 ساڵ کارایی',
+      'p2.r1':'کیمیا','p2.r2':'توانا','p2.r3':'خانە / BMS','p2.r4':'قووڵیی بەتاڵبوون','p2.r5':'گەرەنتی','p2.v5':'5 ساڵ',
+      'p3.r1':'جۆر','p3.v1':'هایبرید / ئۆف-گرید، شەپۆلی سینیی پاک','p3.r2':'بەرهەم','p3.r3':'تێکردنی PV','p3.r4':'پاتری','p3.r5':'گەرەنتی','p3.v5':'3 ساڵ',
+      'prod.note':'مەرج و ڕێساکانی گەرەنتی جێبەجێ دەکرێن. گەرەنتیی پانێڵ چاککردنەوە دەگرێتەوە؛ گەرەنتیی پاتری گۆڕینی BMS و چاککردنەوەی خانەکان دەگرێتەوە؛ گەرەنتیی ئینڤێرتەر تەنها چاککردنەوەیە، لەگەڵ نوێکردنەوەی سۆفتوێر.',
+      'wave':'بەرهەمی شەپۆلی سینیی پاک',
+      'est.eyebrow':'سیستەمەکەت','est.h2':'ماڵەکەت پێویستی بە چی دەبێت؟',
+      'est.lede':'شارەکەت، ژمارەی سپلیتەکانت (ئینڤێرتەر یان ئاسایی)، ئامێرە گەورەکانی ترت و کاتژمێرەکانی بڕانی کارەبامان پێ بڵێ. یاریدەدەرەکەمان لە واتسئاپ دەستبەجێ وەڵام دەداتەوە، و ئەندازیارێک دوای ڕووپێوی بەخۆڕایی شوێنەکە دیزاینەکە پشتڕاست دەکاتەوە.',
+      'est.price':'نرخ دوای ڕووپێوی بەخۆڕایی شوێنەکە دەدرێت.','est.cta':'لە واتسئاپ قسەمان لەگەڵ بکە','est.app':'یان خۆت لە ئەپی Eversol سیستەمەکەت دیاری بکە:',
+      's1.p':'ئەندازیارێک سەردان دەکات بۆ پشکنینی سەربان یان زەوییەکەت، تابلۆی کارەبا و کاتژمێرەکانی بڕانی کارەبا.',
+      's2.p':'قەبارەی پانێڵ، پاتری و ئینڤێرتەر بەپێی ئامێرەکانت و شێوازی بەکارهێنانی کارەبات دیاری دەکەین.',
+      's3.p':'تەکنیکارانی Eversol سیستەمەکە دادەمەزرێنن و ڕێکی دەخەن، بە بەستنەوەی Wi-Fi ـیشەوە.',
+      's4.p':'لە ڕێگەی Wi-Fi ـەوە لە مۆبایلەکەتەوە سیستەمەکەت ببینە. خزمەتگوزاریی دوای فرۆشتن و گەرەنتی لە پێشانگاکەمان لە هەولێر بەڕێوە دەچێت.',
+      'cov.eyebrow':'پێشانگا','cov.h2':'لە هەولێر سەردانمان بکە.','cov.lede':'شەقامی 120 مەتری، بەرامبەر شوقەکانی نەورۆز سیتی، هەولێر.',
+      'cov.hours.h':'کاتەکانی کار','cov.hours':'شەممە – پێنجشەممە، 8:30 ی بەیانی – 8:00 ی ئێوارە. هەینی داخراوە.',
+      'cov.call.h':'پەیوەندی یان واتسئاپ','cov.callonly':'(تەنها پەیوەندی)','cov.map':'لە Google Maps بیکەرەوە',
+      'close.eyebrow':'هەولێر · هەرێمی کوردستان','foot.copy':'© 2026 Eversol · شەقامی 120 مەتری، هەولێر',
+      'p1.h':'پانێڵی <bdi dir="ltr">730 W</bdi>','p2.h':'پاتریی <bdi dir="ltr">16 kWh</bdi>','p3.h':'ئینڤێرتەری هایبریدی <bdi dir="ltr">11 kW</bdi>',
+      'wa.float':'پرسیار لە Eversol بکە','wa.msg':'سڵاو Eversol، دەمەوێت زیاتر دەربارەی سیستەمە خۆرییەکانتان بزانم.'
+    },
+    ar: {
+      'nav.home':'الصفحة الرئيسية Eversol',
+      'nav.system':'النظام','nav.tech':'التقنية','nav.est':'التقدير','nav.proc':'التركيب','nav.quote':'اطلب عرض سعر',
+      'hero.alt':'حيّ في أربيل ليلاً أثناء انقطاع الكهرباء: نوافذ مظلمة وألواح شمسية تحت ضوء القمر',
+      'hero.h1':'حين ينقطع التيار، يبقى شارعك مضيئاً.',
+      'hero.sub':'ألواح شمسية وبطاريات تخزين وتحكّم ذكي، مصمَّمة كنظام واحد للمنازل والأعمال في جميع أنحاء العراق.',
+      'hero.cta1':'صمِّم نظامي','hero.cta2':'شاهد كيف يعمل',
+      'chip.grid':'الشبكة الوطنية','chip.off':'منقطعة','chip.on':'يعمل','replay':'إعادة','sound':'الصوت',
+      'feature.alt':'منزل حديث من طابق واحد عند الغسق، ألواح شمسية سوداء على سطح المرآب وضوء دافئ في كل نافذة',
+      'hs1.aria':'تفاصيل المصفوفة الشمسية','hs2.aria':'تفاصيل البطارية','hs3.aria':'تفاصيل التحكّم المنزلي',
+      'hs1.t':'مصفوفة شمسية سوداء بالكامل','hs1.p':'وحدات سوداء بالكامل على هياكل مائلة، موجّهة نحو شمس العراق. <bdi dir="ltr">8.8 kW</bdi> من 20 لوحاً على هذا السطح.',
+      'hs2.t':'بطارية Eversol Vault','hs2.p':'تخزين LFP مثبَّت على الجدار. يتولّى التغذية في أقل من <bdi dir="ltr">10 ms</bdi>، فلا تشعر الساعات ولا الراوترات بشيء.',
+      'hs3.t':'احتياطي للمنزل كاملاً','hs3.p':'يبقى التكييف ومضخّة الماء والإضاءة تعمل أثناء الانقطاع. وأنت تختار الدوائر ذات الأولوية.',
+      'feature.eyebrow':'أنظمة سكنية','feature.h2':'صُمِّم للبيت الذي تفخر به.',
+      'feature.lede':'خطوط نظيفة على السطح. صندوق هادئ على الجدار. ولا أسلاك مولّدات تعبر الشارع.',
+      'm1.u':'سنة','m1.l':'ضمان أداء الألواح','m2.l':'التحويل عند انقطاع الشبكة','m3.l':'مصمَّم لصيف العراق','m4.l':'مراقبة عن بُعد من فريقنا المحلي',
+      'sys.eyebrow':'نظام Eversol','sys.h2':'نظام واحد. ثلاث طبقات.',
+      'sys.lede':'معظم المركّبين يبيعون قطعاً. نحن نصمّم الألواح والتخزين ووحدة التحكّم معاً، ليذهب كل واط ينتجه السطح إلى حيث يساوي أكثر.',
+      'l.gen':'التوليد','l.store':'التخزين','l.ctrl':'التحكّم',
+      'l1.dd':'<b>ألواح Nova 440.</b> خلايا من نوع N تفقد في الحرارة إنتاجاً أقل من الألواح العادية.',
+      'l2.dd':'<b>بطارية Vault.</b> كيمياء فوسفات حديد الليثيوم. آمنة داخل المنزل، ومصمَّمة لـ 6,000 دورة.',
+      'l3.dd':'<b>عاكس Core والتطبيق.</b> يقرّر كل ثانية: تغذية المنزل، أو الشحن، أو السحب من الشبكة.',
+      'console.aria':'يوم افتراضي لمنزل Eversol','console.head':'يوم افتراضي · سطح <bdi dir="ltr">8.8 kW</bdi> · بطارية Vault <bdi dir="ltr">10 kWh</bdi>',
+      'flow.aria':'تدفّق الطاقة بين الألواح والعاكس والمنزل والبطارية والشبكة',
+      'n.pv':'الألواح','n.home':'المنزل','n.grid':'الشبكة',
+      'hour.aria':'وقت اليوم','outage':'انقطاع الشبكة','soc':'البطارية',
+      'st.empty':'البطارية فارغة. تُفصل الدوائر غير ذات الأولوية حتى الشروق.',
+      'st.charge':'السطح يغذّي المنزل ويشحن الـ Vault.',
+      'st.fullOut':'الـ Vault ممتلئ. يُحجز الفائض أثناء الانقطاع.',
+      'st.fullExp':'الـ Vault ممتلئ. يُصدَّر الفائض إلى الشبكة.',
+      'st.batOut':'الشبكة منقطعة. الـ Vault يشغّل المنزل.',
+      'st.batPeak':'ذروة المساء. الـ Vault يغطّيها قبل الشبكة.',
+      'st.grid':'يسحب من الشبكة.',
+      'st.sample':'نموذج توضيحي فقط.',
+      'st.idle':'اسحب عبر اليوم. نموذج توضيحي فقط، وليس عرض سعر.',
+      'v.offline':'منقطعة',
+      'tech.eyebrow':'التقنية','tech.h2':'مُهندَس للحرارة والغبار والليالي الطويلة.',
+      'tech.lede':'كل مكوّن مختار ومُختبَر لمناخ العراق: أسطح بحرارة <bdi dir="ltr">50 °C</bdi> في تموز، وعواصف الغبار الربيعية، وانقطاعات الشبكة اليومية.',
+      'p1.r1':'نوع الخلية','p1.r2':'القدرة الاسمية','p1.r3':'كفاءة الوحدة','p1.r4':'معامل الحرارة','p1.r5':'الضمان','p1.v5':'25 سنة',
+      'p2.r1':'الكيمياء','p2.r2':'السعة القابلة للاستخدام','p2.r3':'عمر الدورات','p2.r4':'أقصى حرارة محيطة','p2.r5':'قابلة للتوسعة حتى',
+      'p3.r1':'النوع','p3.v1':'عاكس هجين','p3.r2':'الخرج المستمر','p3.r3':'تحويل الاحتياطي','p3.r4':'أعلى كفاءة','p3.r5':'المراقبة',
+      'wave':'230 V · 50 Hz · موجة جيبية نقية',
+      'est.eyebrow':'التقدير','est.h2':'ماذا يحتاج سطحك؟',
+      'est.lede':'اجمع ما تدفعه شهرياً للشبكة الوطنية ولمولّدة الحي. سنحدّد لك حجم نظام مبدئي، ويؤكّده مهندس بعد معاينة مجانية للموقع.',
+      'est.spend':'إنفاقك الشهري على الكهرباء','est.size':'حجم النظام','est.panels':'ألواح Nova 440','est.save':'التوفير في السنة',
+      'est.note':'بافتراض كلفة مدمجة للشبكة والمولّدة قدرها <bdi dir="ltr">$0.11</bdi> لكل kWh، و<bdi dir="ltr">5.5</bdi> ساعات ذروة شمسية، ومردود نظام <bdi dir="ltr">80%</bdi>. تقدير فقط.',
+      'est.cta':'احجز معاينة للموقع',
+      'proc.eyebrow':'التركيب','proc.h2':'من المعاينة إلى التشغيل في أربع خطوات.',
+      's1.k':'الخطوة 1','s2.k':'الخطوة 2','s3.k':'الخطوة 3','s4.k':'الخطوة 4',
+      's1.h':'معاينة الموقع','s1.p':'مسح بالدرون لسطحك وفحص لوحة التوزيع وتجهيزات المولّدة.',
+      's2.h':'تصميم النظام','s2.p':'نموذج الظلال ودراسة الأحمال يحدّدان توزيع الألواح وحجم البطارية والدوائر ذات الأولوية.',
+      's3.h':'التركيب','s3.p':'فنّيو Eversol المعتمدون يركّبون النظام كاملاً، عادةً خلال يومي عمل.',
+      's4.h':'المراقبة','s4.p':'تابع الإنتاج والبطارية مباشرةً في التطبيق. فريقنا يرى الأعطال قبل أن تراها.',
+      'cov.eyebrow':'نطاق الخدمة','cov.h2':'نخدم العراق كلّه.',
+      'cov.lede':'مهندسون ومركّبون وقطع غيار في كل منطقة، من زاخو إلى البصرة.',
+      'cov.north':'الشمال · إقليم كردستان','cov.south':'الوسط والجنوب',
+      'c.erbil':'أربيل','c.suli':'السليمانية','c.duhok':'دهوك','c.halabja':'حلبجة','c.zakho':'زاخو','c.kirkuk':'كركوك',
+      'c.baghdad':'بغداد','c.mosul':'الموصل','c.basra':'البصرة','c.najaf':'النجف','c.karbala':'كربلاء','c.hillah':'الحلة',
+      'c.nasiriyah':'الناصرية','c.amarah':'العمارة','c.ramadi':'الرمادي','c.kut':'الكوت','c.diwaniyah':'الديوانية','c.samarra':'سامراء',
+      'cov.more':'…والعديد من المدن والبلدات الأخرى في جميع أنحاء العراق.',
+      'close.eyebrow':'أربيل · بغداد · البصرة','close.h2':'أنِر البيت كلّه. ثم الشارع كلّه.',
+      'close.lede':'تحدّث مع مهندس من Eversol عن منزلك أو متجرك أو مصنعك.','close.cta2':'اطّلع على المواصفات',
+      'foot.copy':'© 2026 Eversol Energy · أربيل · بغداد · البصرة',
+      'nav.est':'نظامك','nav.show':'المعرض','nav.privacy':'الخصوصية',
+      'hero.sub':'ألواح شمسية وبطاريات تخزين وعاكسات هجينة تعمل كنظام واحد للمنازل والأعمال في العراق.',
+      'hs1.t':'ألواح شمسية بقدرة 730 واط','hs1.p':'وحدات زجاج مزدوج ثنائية الوجه تجمع الضوء من الخلف أيضاً. كفاءة <bdi dir="ltr">23.7 %</bdi>.',
+      'hs2.t':'بطارية LiFePO₄ بسعة <bdi dir="ltr">16 kWh</bdi>','hs2.p':'خلايا REPT من الفئة A ونظام إدارة بطارية PACE. <bdi dir="ltr">95 %</bdi> قابلة للاستخدام، أكثر من <bdi dir="ltr">6,000</bdi> دورة، دون صيانة.',
+      'hs3.p':'يبقى التكييف ومضخّة الماء والإضاءة تعمل أثناء الانقطاع. يحدّد المهندس حجم النظام حسب أجهزة منزلك.',
+      'm2.l':'لكل لوح، بكفاءة <bdi dir="ltr">23.7 %</bdi>','m3.l':'بطارية LiFePO₄، <bdi dir="ltr">95 %</bdi> قابلة للاستخدام','m4.l':'عاكس هجين مع مراقبة عبر Wi-Fi',
+      'sys.lede':'اختيرت الألواح والبطارية والعاكس لتعمل معاً كنظام واحد، ليذهب كل واط ينتجه سطحك إلى حيث يفيد أكثر.',
+      'l1.dd':'<b>ألواح 730 واط.</b> الألواح الشمسية الوحيدة في السوق بقدرة 730 واط وكفاءة <bdi dir="ltr">23.7 %</bdi>. زجاج مزدوج، ثنائية الوجه، 8 قضبان توصيل، فئة A.',
+      'l2.dd':'<b>بطارية <bdi dir="ltr">16 kWh</bdi>.</b> فوسفات حديد الليثيوم، أكثر أنواع الليثيوم أماناً. خلايا REPT من الفئة A، أكثر من <bdi dir="ltr">6,000</bdi> دورة.',
+      'l3.dd':'<b>عاكس هجين <bdi dir="ltr">11 kW</bdi>.</b> كهرباء بموجة جيبية نقية مع Wi-Fi مدمج، لتتابع نظامك من هاتفك.',
+      'console.head':'يوم افتراضي · سطح <bdi dir="ltr">7.3 kW</bdi> · بطارية <bdi dir="ltr">16 kWh</bdi>',
+      'n.bat':'البطارية','n.inv':'العاكس',
+      'st.charge':'السطح يغذّي المنزل ويشحن البطارية.','st.fullOut':'البطارية ممتلئة. يُحجز الفائض أثناء الانقطاع.','st.fullExp':'البطارية ممتلئة. السطح يغذّي المنزل.',
+      'st.batOut':'الشبكة منقطعة. البطارية تشغّل المنزل.','st.batPeak':'ذروة المساء. البطارية تغطّيها قبل الشبكة.',
+      'tech.h2':'المعدّات التي نركّبها.','tech.lede':'الألواح والبطاريات والعاكسات التي تركّبها Eversol، بمواصفات فريقنا الفني.',
+      'p1.r1':'القدرة الاسمية','p1.r2':'الكفاءة','p1.r3':'التصميم','p1.v3':'زجاج مزدوج ثنائي الوجه، 8 قضبان، فئة A','p1.r4':'الأبعاد','p1.r5':'الضمان','p1.v5':'15 سنة للمنتج · 30 سنة للأداء',
+      'p2.r1':'الكيمياء','p2.r2':'السعة','p2.r3':'الخلايا / BMS','p2.r4':'عمق التفريغ','p2.r5':'الضمان','p2.v5':'5 سنوات',
+      'p3.r1':'النوع','p3.v1':'هجين / خارج الشبكة، موجة جيبية نقية','p3.r2':'الخرج','p3.r3':'دخل PV','p3.r4':'البطارية','p3.r5':'الضمان','p3.v5':'3 سنوات',
+      'prod.note':'تُطبَّق شروط وأحكام الضمان. ضمان الألواح يشمل الإصلاح؛ ضمان البطارية يشمل استبدال BMS وإصلاح الخلايا؛ ضمان العاكس للإصلاح فقط، مع تحديثات البرنامج.',
+      'wave':'خرج بموجة جيبية نقية',
+      'est.eyebrow':'نظامك','est.h2':'ماذا يحتاج منزلك؟',
+      'est.lede':'أخبرنا بمدينتك، وعدد أجهزة التكييف لديك (إنفرتر أو عادية)، وأجهزتك الكبيرة الأخرى، وساعات انقطاع الكهرباء. مساعدنا على واتساب يجيبك فوراً، ويؤكّد المهندس التصميم بعد معاينة مجانية للموقع.',
+      'est.price':'تُعطى الأسعار بعد المعاينة المجانية للموقع.','est.cta':'تحدّث معنا على واتساب','est.app':'أو احسب نظامك بنفسك في تطبيق Eversol:',
+      's1.p':'يزورك مهندس لفحص السطح أو الأرض المتاحة، ولوحة الكهرباء، وساعات الانقطاع لديك.',
+      's2.p':'نحدّد حجم الألواح والبطارية والعاكس حسب أجهزتك وطريقة استهلاكك.',
+      's3.p':'يقوم فنّيو Eversol بتركيب النظام وضبطه، بما في ذلك ربط Wi-Fi.',
+      's4.p':'تابع نظامك من هاتفك عبر Wi-Fi. خدمة ما بعد البيع والضمان من معرضنا في أربيل.',
+      'cov.eyebrow':'المعرض','cov.h2':'زورونا في أربيل.','cov.lede':'شارع 120 متر، مقابل شقق نوروز سيتي، أربيل.',
+      'cov.hours.h':'أوقات الدوام','cov.hours':'السبت – الخميس، 8:30 صباحاً – 8:00 مساءً. الجمعة مغلق.',
+      'cov.call.h':'اتصال أو واتساب','cov.callonly':'(اتصال فقط)','cov.map':'افتح في خرائط Google',
+      'close.eyebrow':'أربيل · إقليم كردستان','foot.copy':'© 2026 Eversol · شارع 120 متر، أربيل',
+      'p1.h':'لوح <bdi dir="ltr">730 W</bdi>','p2.h':'بطارية <bdi dir="ltr">16 kWh</bdi>','p3.h':'عاكس هجين <bdi dir="ltr">11 kW</bdi>',
+      'wa.float':'اسأل Eversol','wa.msg':'مرحباً Eversol، أودّ معرفة المزيد عن أنظمتكم الشمسية.'
+    }
+  };
+  // Capture English from the DOM so the markup stays the single source for EN.
+  document.querySelectorAll('[data-i18n]').forEach(el=>{ const k=el.dataset.i18n; if(I18N.en[k]==null) I18N.en[k]=el.innerHTML; });
+  document.querySelectorAll('[data-i18n-attr]').forEach(el=>{ el.dataset.i18nAttr.split(';').forEach(pair=>{ const [attr,k]=pair.split(':'); if(I18N.en[k]==null) I18N.en[k]=el.getAttribute(attr)||''; }); });
+
+  let lang='en', ready=false;
+  const t = k => { const d=I18N[lang]; return (d && d[k]!=null) ? d[k] : I18N.en[k]; };
+  function applyLang(l){
+    if(!I18N[l]) l='en';
+    lang=l;
+    const html=document.documentElement;
+    html.lang = l==='ku' ? 'ckb' : l;
+    html.dir = l==='en' ? 'ltr' : 'rtl';
+    document.querySelectorAll('[data-i18n]').forEach(el=>{ const v=t(el.dataset.i18n); if(v!=null) el.innerHTML=v; });
+    document.querySelectorAll('[data-i18n-attr]').forEach(el=>{ el.dataset.i18nAttr.split(';').forEach(pair=>{ const [attr,k]=pair.split(':'); const v=t(k); if(v!=null) el.setAttribute(attr,v); }); });
+    document.querySelectorAll('.lang button').forEach(b=>{ const on=b.dataset.lang===l; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false'); });
+    try{ localStorage.setItem('eversol-lang', l); }catch(e){}
+    document.querySelectorAll('.wa-link').forEach(a=>{ a.href='https://wa.me/9647759899000?text='+encodeURIComponent(t('wa.msg')); });
+    if(ready){ show(); drawSketches(); }
+  }
+  document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
+  let stored=null; try{ stored=localStorage.getItem('eversol-lang'); }catch(e){}
+  applyLang(stored||'en');
+
+  /* =========== HERO: blackout photo → lit photo spreading from the central house → wordmark with a sparkle trail =========== */
+  const hero=$('hero'), litImg=hero.querySelector('.lit'), wm=$('wm'), spark=$('spark'), sctx=spark.getContext('2d');
+  let timers=[], revealRaf=0, sparkRaf=0;
+  const smooth = k => k*k*(3-2*k);
+  function reveal(dur){
+    cancelAnimationFrame(revealRaf); let t0=null;
+    const step=now=>{
+      if(t0===null) t0=now;
+      const k=Math.min(1,(now-t0)/dur);
+      litImg.style.setProperty('--r',(smooth(k)*135).toFixed(2)+'%');
+      if(k<1) revealRaf=requestAnimationFrame(step);
+    };
+    revealRaf=requestAnimationFrame(step);
+  }
+
+  // Sparkle trail: short-lived glittering particles emitted at the trailing edge of the wordmark while it moves. Runs only during the entrance, then clears.
+  let parts=[], emitting=false, prevX=null, sparkEnd=0, lastNow=0;
+  const rand=(a,b)=>a+Math.random()*(b-a);
+  function stopSparkle(){ cancelAnimationFrame(sparkRaf); sparkRaf=0; emitting=false; parts=[]; sctx.setTransform(1,0,0,1,0,0); sctx.clearRect(0,0,spark.width,spark.height); }
+  function startSparkle(ms){
+    stopSparkle();
+    const r=hero.getBoundingClientRect(), dpr=Math.min(2,devicePixelRatio||1);
+    spark.width=Math.round(r.width*dpr); spark.height=Math.round(r.height*dpr);
+    sctx.setTransform(dpr,0,0,dpr,0,0);
+    prevX=null; emitting=true; lastNow=0; sparkEnd=performance.now()+ms;
+    sparkRaf=requestAnimationFrame(sparkFrame);
+  }
+  function sparkFrame(now){
+    const dt=Math.min(.05,(now-(lastNow||now))/1000); lastNow=now;
+    const rtl=document.documentElement.dir==='rtl', hr=hero.getBoundingClientRect(), wr=wm.getBoundingClientRect();
+    const edge=(rtl?wr.right:wr.left)-hr.left, cy=wr.top-hr.top+wr.height/2, hh=wr.height*.4;
+    if(emitting){
+      if(now>sparkEnd) emitting=false;
+      else if(prevX!==null){
+        const dist=Math.abs(edge-prevX);
+        const n=Math.min(12,Math.round(dist/5.5)+(dist>.4?1:0));
+        for(let i=0;i<n;i++){
+          const u=Math.random(), x=prevX+(edge-prevX)*u+rand(-3,3), y=cy+(Math.random()+Math.random()-1)*hh;
+          const big=Math.random()<.14, cpick=Math.random();
+          parts.push({x,y,vx:(rtl?1:-1)*rand(8,60)+rand(-8,8),vy:rand(-16,16),life:rand(.5,1.25),age:0,
+            r:big?rand(1.6,2.5):rand(.6,1.4),ph:Math.random()*6.283,f:rand(6,14),big,
+            c:cpick<.55?[255,214,130]:cpick<.85?[255,255,255]:[244,181,74]});
+        }
+      }
+      prevX=edge;
+    }
+    sctx.clearRect(0,0,hr.width,hr.height);
+    sctx.globalCompositeOperation='lighter';
+    const T=now/1000; let alive=0;
+    for(const p of parts){
+      p.age+=dt; if(p.age>=p.life) continue; alive++;
+      p.x+=p.vx*dt; p.y+=p.vy*dt; p.vy+=5*dt;
+      const k=1-p.age/p.life, tw=.5+.5*Math.sin(p.ph+T*p.f*6.283), a=k*k*tw;
+      const c=p.c;
+      sctx.fillStyle=`rgba(${c[0]},${c[1]},${c[2]},${(a*.2).toFixed(3)})`; sctx.beginPath(); sctx.arc(p.x,p.y,p.r*3.2,0,6.283); sctx.fill();
+      sctx.fillStyle=`rgba(${c[0]},${c[1]},${c[2]},${a.toFixed(3)})`; sctx.beginPath(); sctx.arc(p.x,p.y,p.r,0,6.283); sctx.fill();
+      if(p.big){ const L=p.r*4*tw; sctx.strokeStyle=`rgba(255,255,255,${(a*.8).toFixed(3)})`; sctx.lineWidth=.8; sctx.beginPath(); sctx.moveTo(p.x-L,p.y); sctx.lineTo(p.x+L,p.y); sctx.moveTo(p.x,p.y-L); sctx.lineTo(p.x,p.y+L); sctx.stroke(); }
+    }
+    parts=parts.filter(p=>p.age<p.life);
+    if(emitting||alive) sparkRaf=requestAnimationFrame(sparkFrame);
+    else { sparkRaf=0; sctx.clearRect(0,0,hr.width,hr.height); }
+  }
+
+  function play(){
+    timers.forEach(clearTimeout); timers=[];
+    cancelAnimationFrame(revealRaf); stopSparkle();
+    hero.classList.remove('brand','rest','kb');
+    litImg.style.setProperty('--r','0%');
+    void hero.offsetWidth;
+    if(reduce){ hero.classList.add('rest'); litImg.style.removeProperty('--r'); return; }
+    hero.classList.add('kb');
+    timers.push(setTimeout(()=>reveal(2200), 800));
+    timers.push(setTimeout(()=>{ hero.classList.add('brand'); startSparkle(1700); }, 2600));
+  }
+  $('replay').addEventListener('click', play);
+
+  /* =========== Logo sound: a real audio file (logo_sfx.mp3) with 2.6 s of lead silence,
+     started directly inside the tap so browsers allow it and it lines up with the logo entrance =========== */
+  const sfx=new Audio('logo_sfx.mp3'); sfx.preload='auto'; sfx.volume=1;
+  let soundOn=false;
+  function playWithSound(){
+    try{ sfx.pause(); sfx.currentTime=0; }catch(e){}
+    const p=sfx.play(); if(p&&p.catch) p.catch(()=>{});
+    play();
+  }
+  function setSound(v){
+    soundOn=v; $('sound').setAttribute('aria-pressed',String(v));
+    if(!v){ try{ sfx.pause(); }catch(e){} }
+  }
+  $('sound').addEventListener('click',()=>{ if(soundOn){ setSound(false); return; } setSound(true); playWithSound(); });
+  $('replay').addEventListener('click',e=>{ if(soundOn){ e.stopImmediatePropagation(); playWithSound(); } },true);
+  // the intro waits behind the tap-to-enter gate; that one tap is what lets the browser play sound
+  hero.classList.add('waiting');
+  $('enter').addEventListener('click',()=>{
+    $('gate').classList.add('gone');
+    hero.classList.remove('waiting');
+    setSound(true); playWithSound();
+    setTimeout(()=>$('gate').remove(),800);
+  });
+
+  /* =========== Hotspots (tap on touch) =========== */
+  document.querySelectorAll('.hs button').forEach(b=>b.addEventListener('click',()=>{
+    const hs=b.parentElement, open=!hs.classList.contains('open');
+    document.querySelectorAll('.hs.open').forEach(o=>o.classList.remove('open'));
+    hs.classList.toggle('open',open);
+  }));
+
+  /* =========== System simulation (static highlighted paths) =========== */
+  const CAP=15.2, MAXP=5, DT=.25, PEAK=7.3;   // 16 kWh at 95 % DoD, 10 x 730 W roof
+  const solarAt=h=>Math.max(0,Math.sin(Math.PI*(h-6)/13))*PEAK*.82;
+  const loadAt=h=>.9+1.7*Math.exp(-((h-20.5)**2)/(2*1.8**2))+.7*Math.exp(-((h-7.5)**2)/2)+1.3*Math.max(0,Math.sin(Math.PI*(h-11)/8));
+  let sim=[];
+  function simulate(outage){
+    let soc=CAP*.55; const out=[];
+    for(let day=0;day<2;day++) for(let i=0;i<96;i++){
+      const h=i*DT, pv=solarAt(h), load=loadAt(h); let bat=0, grid=0, unmet=0;
+      const net=pv-load;
+      if(net>=0){ const c=Math.min(net,MAXP,(CAP-soc)/DT); soc+=c*DT; bat=-c; grid = outage?0:-(net-c); }
+      else { const need=-net, d=Math.min(need,MAXP,soc/DT); soc-=d*DT; bat=d; const rest=need-d; if(outage) unmet=rest; else grid=rest; }
+      if(day===1) out.push({h,pv,load,bat,grid,unmet,soc});
+    }
+    return out;
+  }
+  function setLine(id,val,rev){
+    const el=$(id), a=Math.abs(val);
+    el.classList.toggle('idle',a<.05); el.classList.toggle('rev',!!rev);
+    el.style.strokeWidth = Math.min(6,2+a*.5).toFixed(1);
+  }
+  function show(){
+    if(!sim.length) return;
+    const s=sim[+$('hour').value];
+    const hh=Math.floor(s.h), mm=Math.round((s.h-hh)*60);
+    $('clock').textContent=String(hh).padStart(2,'0')+':'+String(mm).padStart(2,'0');
+    $('v-pv').textContent=s.pv.toFixed(1)+' kW';
+    $('v-home').textContent=(s.load-s.unmet).toFixed(1)+' kW';
+    $('v-bat').textContent=(s.bat>0?'−':s.bat<0?'+':'')+Math.abs(s.bat).toFixed(1)+' kW';
+    const vg=$('v-grid'), off=$('outage').checked;
+    vg.textContent=off?t('v.offline'):(s.grid>0?'↓ ':s.grid<0?'↑ ':'')+Math.abs(s.grid).toFixed(1)+' kW';
+    vg.classList.toggle('num',!off);
+    setLine('l-pv',s.pv);
+    setLine('l-home',s.load-s.unmet);
+    setLine('l-bat',s.bat,s.bat<0);
+    setLine('l-grid',s.grid,s.grid>0);
+    $('n-pv').classList.toggle('on',s.pv>.05);
+    $('n-home').classList.toggle('on',s.load-s.unmet>.05);
+    $('n-bat').classList.toggle('on',Math.abs(s.bat)>.05);
+    $('n-grid').classList.toggle('on',Math.abs(s.grid)>.05);
+    const pct=Math.round(s.soc/CAP*100);
+    $('socBar').style.width=pct+'%'; $('socTxt').textContent=pct+'%';
+    let msg;
+    if(s.unmet>.05) msg=t('st.empty');
+    else if(s.pv>s.load && s.bat<0) msg=t('st.charge');
+    else if(s.pv>s.load) msg=off?t('st.fullOut'):t('st.fullExp');
+    else if(s.bat>0) msg=off?t('st.batOut'):t('st.batPeak');
+    else msg=t('st.grid');
+    $('status').textContent=msg+' '+t('st.sample');
+  }
+  function resim(){ sim=simulate($('outage').checked); show(); }
+  $('hour').addEventListener('input',()=>{ setPlay(false); show(); });
+  // the day plays on its own while the console is on screen; dragging pauses it
+  let playing=!reduce, onScreen=false, tick=null;
+  function setPlay(v){ playing=v; const b=$('play'); b.textContent=v?'❚❚':'▶'; b.setAttribute('aria-label',v?'Pause the simulated day':'Play the simulated day'); loop(); }
+  function loop(){ clearInterval(tick); if(playing&&onScreen){ tick=setInterval(()=>{ const h=$('hour'); h.value=(+h.value+1)%96; show(); },260); } }
+  $('play').addEventListener('click',()=>setPlay(!playing));
+  new IntersectionObserver(es=>{ onScreen=es[0].isIntersecting; loop(); }).observe(document.querySelector('.console'));
+  setPlay(playing);
+  $('outage').addEventListener('change',resim);
+
+  /* =========== Product sketches =========== */
+  function drawSketches(){
+    const rtl=document.documentElement.dir==='rtl';
+    document.querySelectorAll('canvas[data-draw]').forEach(c=>{
+      const r=c.getBoundingClientRect(), dpr=Math.min(2,devicePixelRatio||1);
+      if(r.width<2) return;
+      c.width=Math.round(r.width*dpr); c.height=Math.round(r.height*dpr);
+      const x=c.getContext('2d'); x.setTransform(dpr,0,0,dpr,0,0); const w=r.width,h=r.height, kind=c.dataset.draw;
+      x.clearRect(0,0,w,h);
+      if(kind==='panel'){
+        const cw=14, ch=20, cols=Math.floor((w-40)/cw), rows=4, ox=(w-cols*cw)/2, oy=(h-rows*ch)/2;
+        x.fillStyle='#0E1730'; x.fillRect(ox-3,oy-3,cols*cw+6,rows*ch+6);
+        for(let i=0;i<cols;i++)for(let j=0;j<rows;j++){ x.fillStyle=(i+j)%2?'#1B2E58':'#1E3463'; x.fillRect(ox+i*cw+1,oy+j*ch+1,cw-2,ch-2); }
+        const gr=x.createLinearGradient(ox,oy,ox+cols*cw,oy+rows*ch); gr.addColorStop(0,'rgba(255,255,255,0)'); gr.addColorStop(.5,'rgba(190,215,255,.28)'); gr.addColorStop(.6,'rgba(255,255,255,0)');
+        x.fillStyle=gr; x.fillRect(ox,oy,cols*cw,rows*ch);
+      } else if(kind==='battery'){
+        const bw=Math.min(w*.6,260), bh=64, bx=(w-bw)/2, by=(h-bh)/2;
+        x.strokeStyle='#0A0F1A'; x.lineWidth=2; x.strokeRect(bx,by,bw,bh); x.fillStyle='#0A0F1A'; x.fillRect(bx+bw,by+bh/2-10,7,20);
+        const n=8; for(let i=0;i<n;i++){ x.fillStyle=i<6?'#3159A8':'#C9D2E0'; x.fillRect(bx+6+i*(bw-12)/n,by+6,(bw-12)/n-4,bh-12); }
+      } else {
+        x.strokeStyle='#C9D2E0'; x.lineWidth=1; x.beginPath(); x.moveTo(0,h/2); x.lineTo(w,h/2); x.stroke();
+        x.strokeStyle='#3159A8'; x.lineWidth=2.2; x.beginPath();
+        for(let i=0;i<=w;i++){ const y=h/2-Math.sin(i/w*Math.PI*4)*h*.32; i?x.lineTo(i,y):x.moveTo(i,y); } x.stroke();
+        x.fillStyle='#B8860B'; x.font='500 11px "IBM Plex Mono","Vazirmatn",monospace';
+        x.direction=rtl?'rtl':'ltr'; x.textAlign=rtl?'right':'left';
+        x.fillText(t('wave'), rtl?w-12:12, 18);
+      }
+    });
+  }
+
+  resim(); drawSketches(); ready=true;
+  let rt; addEventListener('resize',()=>{ clearTimeout(rt); rt=setTimeout(drawSketches,150); });
+  document.querySelectorAll('form').forEach(f=>f.addEventListener('submit',e=>e.preventDefault()));
+})();
+</script>
+
+</body>
+</html>
